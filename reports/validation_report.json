@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "errors": [],
+  "checks": {
+    "rows": 891,
+    "null_frac_Age": 0.1987,
+    "null_frac_Embarked": 0.0022
+  }
+}

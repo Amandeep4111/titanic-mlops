@@ -1,0 +1,7 @@
+[core]
+    analytics = false
+    remote = localstorage
+[cache]
+    type = copy
+['remote "localstorage"']
+    url = C:\Users\amand\dvc_remote_storage

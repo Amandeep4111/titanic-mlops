@@ -1,0 +1,39 @@
+data:
+  raw_path: data/raw/Titanic-Dataset.csv
+  processed_dir: data/processed
+  target: Survived
+  required_columns: [PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, Embarked]
+  min_rows: 500
+  max_null_fraction: {Age: 0.30, Embarked: 0.05}
+
+split:
+  test_size: 0.2          # fixed hold-out, identical for every version
+  random_state: 42
+
+feature_selection:
+  method: chi2
+  alpha: 0.05
+
+mlflow:
+  tracking_uri: sqlite:///mlflow.db
+  experiment_name: titanic-decision-tree
+  registered_model_name: TitanicDecisionTree
+  serialization_format: cloudpickle      # skops refuses sklearn.tree._tree.Tree
+
+run:
+  version: v1
+
+versions:
+  v1:
+    train_fraction: 0.6                  # initial batch of cleaned records
+    tree: {criterion: gini, max_depth: 3, min_samples_split: 10, min_samples_leaf: 5}
+  v2:
+    train_fraction: 1.0                  # + additional cleaned records
+    tree: {criterion: gini, max_depth: 5, min_samples_split: 8, min_samples_leaf: 3}
+
+artifacts:
+  model_path: models/model.joblib
+  model_info_path: models/model_info.json
+  metrics_path: reports/metrics.json
+  confusion_matrix_path: reports/confusion_matrix.png
+  validation_path: reports/validation_report.json

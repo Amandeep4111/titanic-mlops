@@ -1,0 +1,49 @@
+{
+  "model_name": "TitanicDecisionTree",
+  "version": "v1",
+  "algorithm": "DecisionTreeClassifier",
+  "params": {
+    "criterion": "gini",
+    "max_depth": 3,
+    "min_samples_split": 10,
+    "min_samples_leaf": 5
+  },
+  "chi2_alpha": 0.05,
+  "selected_features": [
+    "Fare",
+    "Pclass_1",
+    "Pclass_3",
+    "Sex_female",
+    "Sex_male",
+    "Embarked_C",
+    "Embarked_Q",
+    "Embarked_S",
+    "Title_Miss",
+    "Title_Mr",
+    "Title_Mrs",
+    "IsAlone"
+  ],
+  "input_columns": [
+    "Pclass",
+    "Sex",
+    "Age",
+    "SibSp",
+    "Parch",
+    "Fare",
+    "Embarked",
+    "Name"
+  ],
+  "n_train": 427,
+  "n_test": 179,
+  "metrics": {
+    "accuracy": 0.8212,
+    "precision": 0.7846,
+    "recall": 0.7391,
+    "f1": 0.7612,
+    "roc_auc": 0.8617,
+    "train_accuracy": 0.822
+  },
+  "trained_at": "2026-11-19T07:21:00+00:00",
+  "sklearn_version": "1.7.2",
+  "python_version": "3.11.9"
+}
