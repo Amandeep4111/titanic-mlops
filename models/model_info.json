@@ -42,7 +42,7 @@
     "roc_auc": 0.8369,
     "train_accuracy": 0.8553
   },
-  "trained_at": "2026-11-19T07:21:54+00:00",
+  "trained_at": "2026-11-19T07:27:27+00:00",
   "sklearn_version": "1.7.2",
   "python_version": "3.11.9"
 }

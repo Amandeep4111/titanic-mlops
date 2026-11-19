@@ -1,0 +1,10 @@
+.git
+.dvc
+mlruns
+mlartifacts
+mlflow.db
+data
+reports
+__pycache__
+*.pyc
+.ipynb_checkpoints
