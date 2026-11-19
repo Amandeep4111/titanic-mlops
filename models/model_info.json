@@ -1,12 +1,12 @@
 {
   "model_name": "TitanicDecisionTree",
-  "version": "v1",
+  "version": "v2",
   "algorithm": "DecisionTreeClassifier",
   "params": {
     "criterion": "gini",
-    "max_depth": 3,
-    "min_samples_split": 10,
-    "min_samples_leaf": 5
+    "max_depth": 5,
+    "min_samples_split": 8,
+    "min_samples_leaf": 3
   },
   "chi2_alpha": 0.05,
   "selected_features": [
@@ -16,7 +16,6 @@
     "Sex_female",
     "Sex_male",
     "Embarked_C",
-    "Embarked_Q",
     "Embarked_S",
     "Title_Miss",
     "Title_Mr",
@@ -33,17 +32,17 @@
     "Embarked",
     "Name"
   ],
-  "n_train": 427,
+  "n_train": 712,
   "n_test": 179,
   "metrics": {
-    "accuracy": 0.8212,
-    "precision": 0.7846,
-    "recall": 0.7391,
-    "f1": 0.7612,
-    "roc_auc": 0.8617,
-    "train_accuracy": 0.822
+    "accuracy": 0.8268,
+    "precision": 0.7714,
+    "recall": 0.7826,
+    "f1": 0.777,
+    "roc_auc": 0.8369,
+    "train_accuracy": 0.8553
   },
-  "trained_at": "2026-11-19T07:21:00+00:00",
+  "trained_at": "2026-11-19T07:21:54+00:00",
   "sklearn_version": "1.7.2",
   "python_version": "3.11.9"
 }
